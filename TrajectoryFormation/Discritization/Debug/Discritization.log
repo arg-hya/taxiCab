@@ -1,0 +1,5 @@
+﻿  ReadWrtiteTrajecs.cpp
+d:\taxicab\project_taxicab\trajectoryformation\discritization\readwrtitetrajecs.cpp(230): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\discritization\readwrtitetrajecs.cpp(250): warning C4018: '<': signed/unsigned mismatch
+  Discritization.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\Discritization.exe
+  Discritization.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\Discritization.pdb (Full PDB)

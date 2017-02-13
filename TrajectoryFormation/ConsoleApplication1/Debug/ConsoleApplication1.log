@@ -1,0 +1,5 @@
+﻿  ConsoleApplication1.cpp
+d:\taxicab\mycode\trajectoryformation\consoleapplication1\consoleapplication1.cpp(35): warning C4101: 'count': unreferenced local variable
+d:\taxicab\mycode\trajectoryformation\consoleapplication1\consoleapplication1.cpp(43): warning C4101: 'tempID': unreferenced local variable
+  ConsoleApplication1.vcxproj -> D:\TaxiCab\mycode\TrajectoryFormation\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> D:\TaxiCab\mycode\TrajectoryFormation\Debug\ConsoleApplication1.pdb (Full PDB)

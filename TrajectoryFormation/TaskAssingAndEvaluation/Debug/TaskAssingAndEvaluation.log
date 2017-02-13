@@ -1,0 +1,10 @@
+﻿  TaskAssingAndEvaluation.cpp
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(16): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(32): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(34): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(50): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(104): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(230): warning C4018: '<': signed/unsigned mismatch
+  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe
+  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TaskAssingAndEvaluation.pdb (Full PDB)

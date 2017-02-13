@@ -1,0 +1,9 @@
+﻿  GenerateTraj.cpp
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(35): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(169): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(180): warning C4018: '<=': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(184): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(314): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(322): warning C4018: '<': signed/unsigned mismatch
+  TrajectoryFormation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TrajectoryFormation.exe
+  TrajectoryFormation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TrajectoryFormation.pdb (Full PDB)
