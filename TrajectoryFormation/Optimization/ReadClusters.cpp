@@ -27,16 +27,13 @@ int ReadClusters::getClusters(Cluster* &Clusters)
         return EXIT_FAILURE;
     }
 
-    in_file.seekg(std::ios::beg); 
+    in_file.seekg(std::ios::beg);
 
     std::getline(in_file, strtemp);
     count = stoi(strtemp);
     Clusters = new Cluster[count];
 
-    std::getline(in_file, strtemp);
-    tot_epoch = stoi(strtemp);
-
-    for (int i = 0; i < count ; i++)
+    for (int i = 0; i < count; i++)
     {
 
         std::getline(in_file, strtemp);
@@ -53,24 +50,6 @@ int ReadClusters::getClusters(Cluster* &Clusters)
         }
         delete[] cstr;
 
-        std::getline(in_file, strtemp);
-        Clusters[i].TrajCentroid = new CabTrajectory[tot_epoch];
-
-        pch = NULL;
-        cstr = new char[strtemp.length() + 1];
-        std::strcpy(cstr, strtemp.c_str());
-        pch = std::strtok(cstr, " ");
-
-        while (pch != NULL)
-        {
-            Clusters[i].TrajCentroid->lat = stoi(std::string(pch));
-            pch = std::strtok(NULL, " ");
-            if (pch != NULL)
-            {
-                Clusters[i].TrajCentroid->lon = stoi(std::string(pch));
-            }
-        }
-        delete[] cstr;
     }
     in_file.close();
 

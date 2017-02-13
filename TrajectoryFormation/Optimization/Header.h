@@ -22,8 +22,9 @@ struct Cluster
 {
     std::vector<unsigned int> CabIDs;
     std::vector<int> TaskIDs;
-    CabTrajectory* TrajCentroid;
+    CabTrajectory** Cabs;
     int cost;
+    int spatcov;
 };
 
 struct Task

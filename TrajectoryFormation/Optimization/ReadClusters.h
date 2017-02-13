@@ -16,7 +16,6 @@ private:
     std::ifstream in_file;
 public:
     int count;
-    int tot_epoch;
     std::string ClusterFilePath;
     int getClusters(Cluster* &Clusters);
 };

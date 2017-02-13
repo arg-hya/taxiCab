@@ -10,13 +10,12 @@
 #include <random>
 #include "Header.h"
 
-class ReadClusters
+class ReadSampleTasks
 {
 private:
     std::ifstream in_file;
 public:
-    int count;
     int tot_epoch;
-    std::string ClusterFilePath;
-    int getClusters(Cluster* &Clusters);
+    std::string SampleTasksFilePath;
+    int getSampleTasks(std::vector<Task>& SampleTasks);
 };
