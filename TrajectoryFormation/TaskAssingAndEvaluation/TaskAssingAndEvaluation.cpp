@@ -66,11 +66,11 @@ int main()
         int epoch = it->epoch, diff = 0, old_diff = 0, indx = 0, taskID = 0;
 
         for (int i = 0; i < tot_clusters; i++)
-        {
-            old_diff = diff;
+        {            
             diff = calDiff(*it, Clusters[i].TrajCentroid[epoch]);
             if (diff < old_diff)
             {
+                old_diff = diff;
                 indx = i;
             }
         }
