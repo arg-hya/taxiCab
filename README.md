@@ -1,17 +1,17 @@
-# taxiCab
+# **taxiCab**
 Analysis of taxicab trajectories in NY region.
 
-		# DataCleanUP
+#**DataCleanUP**
 
-1.> Run the exe
+1.> *Run the exe*
 Cleans the data.
-Put the Jan data in **Data\1\**
+Put the Jan data in Data\1\
 The cleand up data will be generated in Output\
 
-2.> Run the python scripts present in Output\
+2.> *Run the python scripts present in Output\*
 Converts Lat, Lon to projected co-ordinates
 
-		#TrajectoryFormation
+#**TrajectoryFormation**
 
 **1.>	Put the cleanup data into TrajectoryFormation\Data**
 
