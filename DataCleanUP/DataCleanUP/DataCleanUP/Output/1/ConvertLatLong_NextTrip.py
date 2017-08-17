@@ -5,7 +5,7 @@ import shapefile as shp
 import matplotlib.pyplot as plt
 
 
-projobj = pycrs.loader.from_file(r'D:\TaxiCab\mycode\python\taxi_zones\taxi_zones.prj')
+projobj = pycrs.loader.from_file(r'..\..\..\..\..\taxi_zones\taxi_zones.prj')
 proj4string = projobj.to_proj4()
 print(proj4string)
 
