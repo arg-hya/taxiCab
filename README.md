@@ -1,7 +1,7 @@
 # **taxiCab**
 Analysis of taxicab trajectories in NY region.
 
-#**DataCleanUP**
+# **DataCleanUP**
 
 1.> *Run the exe*
 Cleans the data.
