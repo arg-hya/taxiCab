@@ -70,6 +70,25 @@ int ReadTrajectory::getTrajecs(CabTrajectory** Cabs, std::vector<unsigned int>& 
     int count;
     std::string strtemp, strTempID, strtemp_path;
 
+    for (int i = 0; i < IDs.size(); i++)
+    {
+        Cabs[i] = new CabTrajectory[tot_epoch];
+        for (int k = 0; k < tot_epoch; k++)
+        {
+                 Cabs[i][k].lat = 0;
+                 Cabs[i][k].lon = 0;
+        }
+    }
+
+    for (int i = 0; i < IDs.size(); i++)
+    {
+        //Cabs[i] = new CabTrajectory[tot_epoch];
+        for (int k = 0; k < tot_epoch; k++)
+        {
+          //  std::cout << Cabs[i][k].lat << " ";
+          //  std::cout << Cabs[i][k].lon << " ";
+        }
+    }
 
     for (int i = 0; i < IDs.size(); i++)
     {
@@ -85,27 +104,37 @@ int ReadTrajectory::getTrajecs(CabTrajectory** Cabs, std::vector<unsigned int>& 
         in_tempfile.open(strtemp_path, std::ios::in);
         if (!in_tempfile.is_open())	continue;
 
-        Cabs[i] = new CabTrajectory[tot_epoch];
-
         int j = 0;
         while (std::getline(in_tempfile, strtemp))
         {
-            char * pch = NULL;
+           char * pch = NULL;
             char * cstr = new char[strtemp.length() + 1];
             std::strcpy(cstr, strtemp.c_str());
             pch = std::strtok(cstr, ",");   //idle time
             pch = std::strtok(NULL, ",");   //date and time
             pch = std::strtok(NULL, ",");
-            Cabs[i][j].lat = stof(std::string(pch));
+
+            if (pch == "nan")
+            {
+                Cabs[i][j].lat = 0;
+            }
+            else
+            Cabs[i][j].lat = stoi(std::string(pch));
             pch = std::strtok(NULL, ",");
-            Cabs[i][j].lon = stof(std::string(pch));
+            if (pch == "nan")
+            {
+                Cabs[i][j].lon = 0;
+            }
+            else
+            Cabs[i][j].lon = stoi(std::string(pch));
 
             j++;
-            delete[] cstr;
+            delete[] cstr;           
         }
+        //std::cout << " " << j << " ";
         in_tempfile.close();
     }
 
-    return EXIT_SUCCESS;
+     return EXIT_SUCCESS;
 
 }

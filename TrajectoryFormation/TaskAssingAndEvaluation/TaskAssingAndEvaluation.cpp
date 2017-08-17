@@ -41,6 +41,9 @@ int printSelectedClusters(Cluster* &Clusters, int tot_clusters)
 
 int main()
 {
+    std::ofstream out_med_file;
+    out_med_file.open(OUTPUT_DIR + "ClusterID_TaskAssignation.data", std::ios::out);
+
     int tot_clusters = 0, tot_sampletask = 0, tot_epoch = 0;
     int Budget, Budget_rem;
     Cluster* Clusters = NULL;
@@ -66,16 +69,21 @@ int main()
         int epoch = it->epoch, diff = 0, old_diff = 0, indx = 0, taskID = 0;
 
         for (int i = 0; i < tot_clusters; i++)
-        {            
+        {
+            old_diff = diff;
+            if ((Clusters[i].TrajCentroid[epoch].lat == 0) || (Clusters[i].TrajCentroid[epoch].lon == 0))
+                continue;
             diff = calDiff(*it, Clusters[i].TrajCentroid[epoch]);
             if (diff < old_diff)
             {
-                old_diff = diff;
                 indx = i;
             }
         }
+        out_med_file << indx << std::endl;
         Clusters[indx].TaskIDs.push_back(taskID++);
     }
+
+    out_med_file.close();
 
     return 0;
 }

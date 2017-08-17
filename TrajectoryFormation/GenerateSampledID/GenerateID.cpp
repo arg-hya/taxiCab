@@ -66,12 +66,47 @@ int GenerateID::GenerateUniqueIDs()
         in_med_file >> strtemp;
         value = stoi(strtemp);
 
-        if (std::find(Unique_IDs.begin(), Unique_IDs.end(), value) == Unique_IDs.end())
+        //Assuming the input file is sorted in non-decreasing way
+        if (0 == count)
         {
             Unique_IDs.push_back(value);
+            Unique_IDs_hitcount.push_back(0);
+        }
+        else
+        {
+            if (value > Unique_IDs.back())
+            {
+                Unique_IDs.push_back(value);
+                Unique_IDs_hitcount.push_back(0);
+            }
+            else if (value == Unique_IDs.back())
+            {
+                Unique_IDs_hitcount[Unique_IDs_hitcount.size() - 1] ++;
+            }
+        }        
+        /*if (std::find(Unique_IDs.begin(), Unique_IDs.end(), value) == Unique_IDs.end())
+        {
+            Unique_IDs.push_back(value);
+        }*/
+    }
+
+    //Cabs with a minimum number of records should be considered
+    if (Unique_IDs_hitcount.size() != Unique_IDs.size())
+    {
+        std::cout << "Unique_IDs_hitcount.size() != Unique_IDs.size()" << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    for (int i = 0; i < Unique_IDs_hitcount.size(); i++)
+    {
+        if (Unique_IDs_hitcount[i] <= MIN_RECORDS_REQUIRED)
+        {
+            Unique_IDs.erase(Unique_IDs.begin() + i);
+            Unique_IDs_hitcount.erase(Unique_IDs_hitcount.begin() + i);
         }
     }
-    file_length = count;
+
+     file_length = count;
     return hresult;
 }
 

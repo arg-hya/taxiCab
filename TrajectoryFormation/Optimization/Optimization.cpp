@@ -67,11 +67,8 @@ int PutTrajecsInClusters(Cluster* &Clusters, CabTrajectory** Cabs, std::vector<u
 
 int CalculateSaptioTemporalCoverage(Cluster &Cluster, std::vector<Task> &SampleTasks, int tot_epoch, int tot_cabs)
 {
-    int k = 0, sum_x = 0, sum_y = 0, spatcov = 0;
-    std::vector<Task>* ClusterTasks = NULL;
+    unsigned int sum_x = 0, sum_y = 0, spatcov = 0, min = 0;
 
-    /*Store the tasks assigned to this cluster per epoch-wise*/
-    ClusterTasks = new std::vector<Task>[tot_epoch];
     for (std::vector<int>::iterator it = Cluster.TaskIDs.begin(); it != Cluster.TaskIDs.end(); ++it)
     {
         int current_epoch = SampleTasks.at(*it).epoch;
@@ -81,33 +78,84 @@ int CalculateSaptioTemporalCoverage(Cluster &Cluster, std::vector<Task> &SampleT
         TempTask.lon = SampleTasks.at(*it).lon;
         TempTask.idleTime = SampleTasks.at(*it).idleTime;
 
-        ClusterTasks[current_epoch].push_back(TempTask);
-    }
-
-    /*Get the trajectory of the cabs*/
-    for (int i = 0; i < tot_epoch; i++)
-    {
-        int x, y, x1, y1;
-        sum_x = sum_y = 0;
-        for (std::vector<Task>::iterator it = ClusterTasks[i].begin(); it != ClusterTasks[i].end(); ++it)
+        for (int j = 0; j < tot_cabs; j++)
         {
-            for (int j = 0; j < tot_cabs; j++)
-            {
-                sum_x += Cluster.Cabs[j][i].lat;
-                sum_y += Cluster.Cabs[j][i].lon;
-            }
-            x = (sum_x / tot_cabs);
-            y = (sum_y / tot_cabs);
-            x1 = ((sum_x + it->lat) / (tot_cabs + 1));
-            y1 = ((sum_y + it->lon) / (tot_cabs + 1));
+            if ((Cluster.Cabs[j][current_epoch].lat == 0)|| (Cluster.Cabs[j][current_epoch].lon == 0))
+                continue;
+            sum_x = Cluster.Cabs[j][current_epoch].lat - TempTask.lat;
+            sum_y = Cluster.Cabs[j][current_epoch].lon - TempTask.lon;
 
-            spatcov += std::sqrt(SQUARE((x - x1)) + SQUARE((y - y1)));
+            unsigned int dist = std::sqrt(SQUARE((sum_x)) + SQUARE((sum_y)));
+            if (0 == j)
+                min = dist;
+            else
+            {
+                if (min > dist)
+                {
+                    min = dist;
+                }
+            }
         }
+
+        spatcov += min;
     }
+   
     Cluster.spatcov = spatcov;
 
     return EXIT_SUCCESS;
 }
+
+//int CalculateSaptioTemporalCoverage(Cluster &Cluster, std::vector<Task> &SampleTasks, int tot_epoch, int tot_cabs)
+//{
+//    int k = 0, sum_x = 0, sum_y = 0, spatcov = 0;
+//    std::vector<Task>* ClusterTasks = NULL;
+//
+//    /*Store the tasks assigned to this cluster per epoch-wise*/
+//    ClusterTasks = new std::vector<Task>[tot_epoch];
+//    for (std::vector<int>::iterator it = Cluster.TaskIDs.begin(); it != Cluster.TaskIDs.end(); ++it)
+//    {
+//        int current_epoch = SampleTasks.at(*it).epoch;
+//        Task TempTask;
+//        TempTask.epoch = current_epoch;
+//        TempTask.lat = SampleTasks.at(*it).lat;
+//        TempTask.lon = SampleTasks.at(*it).lon;
+//        TempTask.idleTime = SampleTasks.at(*it).idleTime;
+//
+//        ClusterTasks[current_epoch].push_back(TempTask);
+//    }
+//
+//    /*Get the trajectory of the cabs*/
+//    for (int i = 0; i < tot_epoch; i++)
+//    {
+//        int x, y, x1, y1;
+//        sum_x = sum_y = 0;
+//        for (std::vector<Task>::iterator it = ClusterTasks[i].begin(); it != ClusterTasks[i].end(); ++it)
+//        {
+//            for (int j = 0; j < tot_cabs; j++)
+//            {
+//                sum_x += Cluster.Cabs[j][i].lat;
+//                sum_y += Cluster.Cabs[j][i].lon;
+//            }
+//            x = (sum_x / tot_cabs);
+//            y = (sum_y / tot_cabs);
+//            x1 = ((sum_x + it->lat) / (tot_cabs + 1));
+//            y1 = ((sum_y + it->lon) / (tot_cabs + 1));
+//
+//            spatcov += std::sqrt(SQUARE((x - x1)) + SQUARE((y - y1)));
+//        }
+//    }
+//    Cluster.spatcov = spatcov;
+//
+//    //Clean up
+//    for (int i = 0; i < tot_epoch; i++)
+//    {
+//        std::vector<Task>().swap(ClusterTasks[i]);
+//    }
+//    delete[] ClusterTasks;
+//
+//
+//    return EXIT_SUCCESS;
+//}
 
 int swapTasks(Cluster &Cluster1, Cluster &Cluster2)
 {
@@ -122,7 +170,7 @@ bool customComp(tempst a, tempst b)
 }
 
 
-int selectClusters(Cluster* &Clusters, std::vector<unsigned int> SelectedClusterIDs,
+int selectClusters(Cluster* &Clusters, std::vector<unsigned int>& SelectedClusterIDs,
     int tot_clusters, int budget, int *Budget_rem)
 {
     std::vector<tempst> sptcov_cost;
@@ -139,7 +187,7 @@ int selectClusters(Cluster* &Clusters, std::vector<unsigned int> SelectedCluster
     std::sort(sptcov_cost.begin(), sptcov_cost.end(), customComp);
 
     int j = 0;
-    while (true)
+    while (j < sptcov_cost.size())
     {
         budget -= Clusters[sptcov_cost[j].indx].cost;
         if (budget > 0)
@@ -152,6 +200,8 @@ int selectClusters(Cluster* &Clusters, std::vector<unsigned int> SelectedCluster
             break;
         }
     }
+
+    if (j >= sptcov_cost.size()) j--;
 
     *Budget_rem = budget + Clusters[sptcov_cost[j].indx].cost;
 
@@ -191,18 +241,26 @@ int writeSelectedClusters(Cluster* &Clusters, std::vector<unsigned int> Selected
             temp[j].lon = 0;
         }
 
+        out_med_file << std::endl;
+
         for (std::vector<unsigned int>::iterator pt = Clusters[*it].CabIDs.begin();
             pt != Clusters[*it].CabIDs.end(); ++pt)
         {
             out_med_file << *pt << " ";
-            for (int j = 0; j < tot_epoch; j++)
-            {
-                temp[j].lat += Clusters[*it].Cabs[*pt][j].lat;
-                temp[j].lon += Clusters[*it].Cabs[*pt][j].lon;
-            }
 
         }
+        
         out_med_file << std::endl;
+
+        for (size_t i = 0; i < Clusters[*it].CabIDs.size(); i++)
+        {
+            for (int j = 0; j < tot_epoch; j++)
+            {
+                temp[j].lat += Clusters[*it].Cabs[i][j].lat;
+                temp[j].lon += Clusters[*it].Cabs[i][j].lon;
+            }
+        }
+        
         for (int j = 0; j < tot_epoch; j++)
         {
             out_med_file << (temp[j].lat / Clusters[*it].CabIDs.size()) << " ";
@@ -241,7 +299,7 @@ int main()
     std::vector<unsigned int> SelectedClusterIDs;
 
     ReadClusters* ReadCluster = new ReadClusters();
-    ReadCluster->ClusterFilePath = OUTPUT_DIR + "Test.data";
+    ReadCluster->ClusterFilePath = OUTPUT_DIR + "FinalClusters_before_Optimization.csv";
     ReadCluster->getClusters(Clusters);
     tot_clusters = ReadCluster->count;
     delete ReadCluster;
@@ -252,7 +310,7 @@ int main()
     tot_sampletask = SampleTasks.size();
     tot_epoch = ReadSampleTask->tot_epoch;
     delete ReadSampleTask;
-
+   // tot_epoch = 720;
     ReadTrajectory* ReadTrajec = new ReadTrajectory();
     ReadTrajec->IDfilePath = INPUT_DIR + "1\\" + "sampled.txt";
     ReadTrajec->SampledTrajecFilesPath = OUTPUT_DIR + "Sampled_Trajecs\\";
@@ -260,7 +318,7 @@ int main()
     Cabs = new CabTrajectory*[IDs.size()];
     ReadTrajec->getTrajecs(Cabs, IDs, tot_epoch);
     tot_cabs = IDs.size();
-    PutTrajecsInClusters(Clusters, Cabs, IDs, tot_clusters, tot_epoch);
+      PutTrajecsInClusters(Clusters, Cabs, IDs, tot_clusters, tot_epoch);
     delete[] Cabs;
     delete ReadTrajec;
 
@@ -283,27 +341,33 @@ int main()
     int count = 0;
     do
     {
-        int a = RANDOM(0, tot_clusters - 1);
-        int indx_a = a; //SelectedClusterIDs[a];
+        int indx_a = RANDOM(0, tot_clusters - 1);
+        //int indx_a = a; //SelectedClusterIDs[a];
         int b = RANDOM(0, tot_SelectedClusters - 1);
         int indx_b = SelectedClusterIDs[b];
         int init_sptcov_a = Clusters[indx_a].spatcov;
         int init_sptcov_b = Clusters[indx_b].spatcov;
 
         swapTasks(Clusters[indx_a], Clusters[indx_b]);
-        CalculateSaptioTemporalCoverage(Clusters[indx_a], SampleTasks, tot_epoch, tot_cabs);
-        CalculateSaptioTemporalCoverage(Clusters[indx_a], SampleTasks, tot_epoch, tot_cabs);
+        CalculateSaptioTemporalCoverage(Clusters[indx_a], SampleTasks, tot_epoch, Clusters[indx_a].CabIDs.size());
+        CalculateSaptioTemporalCoverage(Clusters[indx_b], SampleTasks, tot_epoch, Clusters[indx_b].CabIDs.size());
 
         int max = getMin(init_sptcov_a, init_sptcov_b, Clusters[indx_a].spatcov, Clusters[indx_b].spatcov);
 
         if (max == init_sptcov_a)
         {
             swapTasks(Clusters[indx_a], Clusters[indx_b]);
-            if (Clusters[indx_a].cost <= (Clusters[indx_b].cost + Budget_rem))
+
+            //Check if already present
+            std::vector<unsigned int>::iterator pt = std::find(SelectedClusterIDs.begin(), SelectedClusterIDs.end(), indx_a);
+            if (pt == SelectedClusterIDs.end())
             {
-                SelectedClusterIDs[b] = a;
-                Budget_rem += (Clusters[indx_a].cost - Clusters[indx_b].cost);
-                count = 0;
+                if (Clusters[indx_a].cost <= (Clusters[indx_b].cost + Budget_rem))
+                {
+                    SelectedClusterIDs[b] = indx_a;
+                    Budget_rem -= (Clusters[indx_a].cost - Clusters[indx_b].cost);
+                    count = 0;
+                }
             }
         }
         else if (max == init_sptcov_b)
@@ -314,12 +378,22 @@ int main()
         }
         else if (max == Clusters[indx_a].spatcov)
         {
-            if (Clusters[indx_a].cost <= (Clusters[indx_b].cost + Budget_rem))
+            //Check if already present
+            std::vector<unsigned int>::iterator pt = std::find(SelectedClusterIDs.begin(), SelectedClusterIDs.end(), indx_a);
+            if (pt == SelectedClusterIDs.end())
             {
-                SelectedClusterIDs[b] = a;
-                Budget_rem += (Clusters[indx_a].cost - Clusters[indx_b].cost);
+                if (Clusters[indx_a].cost <= (Clusters[indx_b].cost + Budget_rem))
+                {
+                    SelectedClusterIDs[b] = indx_a;
+                    Budget_rem -= (Clusters[indx_a].cost - Clusters[indx_b].cost);
+                }
+                count = 0;
             }
-            count = 0;
+            else //Index already present, thus reverting the changes done
+            {
+                swapTasks(Clusters[indx_a], Clusters[indx_b]);
+                //count ++;
+            }
         }
         else if (max == Clusters[indx_b].spatcov)
         {
@@ -327,7 +401,7 @@ int main()
             //select b; 
         }
 
-    } while (count < GREEDY_THRESHOLD);
+    } while ((count < GREEDY_THRESHOLD) || (Budget_rem > 0));
 
     std::sort(SelectedClusterIDs.begin(), SelectedClusterIDs.end());
 

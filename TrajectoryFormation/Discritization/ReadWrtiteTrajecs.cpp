@@ -148,7 +148,8 @@ int ReadWrtiteTrajecs::WriteSampledTrajecs(int ID, bool* fillarray, int fillarra
 	out_file.open(strtemp_path, std::ios::out);
 
 	int j = 0;
-	for (int i = 0; i < fillarray_size; i++)
+    int i = 0;
+	for (i = 0; i < fillarray_size; i++)
 	{
         if (i != 0) // Put comma after every lat,long pair. [for Pretty Printing]
         {
@@ -159,10 +160,16 @@ int ReadWrtiteTrajecs::WriteSampledTrajecs(int ID, bool* fillarray, int fillarra
 		{
 			out_file << temp_points[j].idle_time << ",";
 			out_file << temp_points[j].date_time_1 << " " << temp_points[j].date_time_2 << ",";
-			out_file << temp_points[j].lat << ",";
-			out_file << temp_points[j].lon << "\n";
+            if (temp_points[j].lat == "nan" || temp_points[j].lon == "nan")
+            {
+                temp_points[j].lat =  "0" ;
+                temp_points[j].lon = "0";
+            }
 
-            out_file_forClustering << temp_points[j].lat << "," << temp_points[j].lon;
+            out_file << stoi(temp_points[j].lat) << ",";
+            out_file << stoi(temp_points[j].lon) << "\n";
+
+           out_file_forClustering << temp_points[j].lat << "," << temp_points[j].lon;
 
 			j++;
 		}
@@ -173,6 +180,7 @@ int ReadWrtiteTrajecs::WriteSampledTrajecs(int ID, bool* fillarray, int fillarra
         }
 		
 	}
+
     out_file_forClustering << std::endl;
 	out_file.close();
 

@@ -1,4 +1,4 @@
-// Discritization.cpp : Defines the entry point for the console application.
+  // Discritization.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -51,7 +51,7 @@ int main()
 	try
 	{
 
-        CreateSampleSteps * SampleSteps = new CreateSampleSteps();
+       /* CreateSampleSteps * SampleSteps = new CreateSampleSteps();
         SampleSteps->numSampleIDs = 10;
         SampleSteps->IDfilePath = INPUT_DIR + "1" + "\\sampled.txt";
         SampleSteps->getTrajecs();
@@ -66,9 +66,9 @@ int main()
         ReadID->getTrajecs(Trajecs, step_array);
 
         delete ReadID;
-        ReadID = NULL;
+        ReadID = NULL;*/
 
-      /*  std::vector <ref_time> step_array;
+        std::vector <ref_time> step_array;
 
 		for (int i = 0; i < 720; i++)
 		{
@@ -85,8 +85,8 @@ int main()
         ReadID->AllTrajecspath = OUTPUT_DIR + "Sampled_Trajecs\\" + "AllTrajecs.data";
 		ReadID->getTrajecs(Trajecs, step_array);
        
-        delete ReadID;
-        ReadID = NULL;*/
+         delete ReadID;
+        ReadID = NULL;
     }
     catch (...)
     {

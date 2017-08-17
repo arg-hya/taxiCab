@@ -61,15 +61,17 @@ int ReadClusters::getClusters(Cluster* &Clusters)
         std::strcpy(cstr, strtemp.c_str());
         pch = std::strtok(cstr, " ");
 
-        while (pch != NULL)
+        int k = 0;
+        do
         {
-            Clusters[i].TrajCentroid->lat = stoi(std::string(pch));
+            Clusters[i].TrajCentroid[k].lat = stoi(std::string(pch));
             pch = std::strtok(NULL, " ");
             if (pch != NULL)
             {
-                Clusters[i].TrajCentroid->lon = stoi(std::string(pch));
+                Clusters[i].TrajCentroid[k++].lon = stoi(std::string(pch));
             }
-        }
+            pch = std::strtok(NULL, " ");
+        }while (pch != NULL);
         delete[] cstr;
     }
     in_file.close();

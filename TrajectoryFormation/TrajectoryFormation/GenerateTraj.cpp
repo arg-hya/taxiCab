@@ -288,7 +288,7 @@ int GenerateTraj::copyBlockfromAll(unsigned int j, unsigned int strat, unsigned 
 
 		out_files_array[j].count++;
     }
-	
+
    // out_files[j] << std::endl;
     
     return EXIT_SUCCESS;
@@ -325,13 +325,17 @@ int GenerateTraj::generatetTrajectories()
 			{
 				WriteTrajtoFiles();
 			}
-			std::cout << j  << std::endl;
+			//std::cout << j  << std::endl;
             tempID = IDs[j];                  
 
             hresult = getStartandEndLine(tempID, strat, end, (!strat ? true : false ));
 
             if ((strat != end) && (EXIT_SUCCESS == hresult))
                 copyBlockfromAll(j , strat, end);
+
+            //Debug
+            if (0 == out_files_array[j].count)
+                std::cout << IDs[j] << std::endl;
         }
 		WriteTrajtoFiles();
         CloseFilesforReading();

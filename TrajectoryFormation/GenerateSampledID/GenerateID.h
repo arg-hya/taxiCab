@@ -12,6 +12,7 @@
 #include <string>
 #include <random>
 
+#define MIN_RECORDS_REQUIRED 10
 
 class GenerateID
 {
@@ -21,6 +22,7 @@ private:
     =================*/   
     std::string rnd_dist;
     std::vector<unsigned int> Unique_IDs;
+    std::vector<int> Unique_IDs_hitcount;
     
     std::ifstream in_med_file;
     
