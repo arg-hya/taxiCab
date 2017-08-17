@@ -32,7 +32,7 @@ if __name__ == "__main__":
     
     with open("AllTrajecs.data") as f:
         next(f)
-         for line in f:            
+        for line in f:            
             strings = line.split(",")
             for i in range(0,len(strings),2):                
                 co1 = float(strings[i])                

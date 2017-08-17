@@ -12,7 +12,7 @@ numbersY = []
 
 TaskPoints = {}
 
-shpFilePath = "D:\projects\TaxiCab\MyCode\learn_py\Data1\\taxi_zones"  
+shpFilePath = r"D:\TaxiCab\mycode\Plots\ShapefileAndTrajectory\taxi_zones\taxi_zones"  
 
 
 sf = shp.Reader(shpFilePath)
@@ -29,7 +29,11 @@ for shape in sf.shapeRecords():
     numbersY.append(meanY)
     plt.plot(x,y)
     
-
+num = 0 ##range(263)
+for x, y in zip(numbersX, numbersY):
+    plt.text(x, y, str(num), color="red", fontsize=12)
+    num = num + 1
+    
 plt.plot(numbersX, numbersY, 'o', color='blue', markersize=7, markeredgewidth=0.0)    
 #print (len(numbersX))
 #print (numbersY)
