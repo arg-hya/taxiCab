@@ -43,6 +43,50 @@ Discritization
 Creates 5000 sampled trajectory files of 720 length each
 Output : "{cabID}_sampled.traj" in Output\
 
+# **TraNodeCreator**
+
+Generate Node Points
+--------------------
+
+**1.> Run NodePointGenerator.py**
+
+Generates 263 node points corresponding to each taxi zone
+Output file : "NodePoints.data" 
+
+TrajectoryFormation
+-------------------
+
+**1.> Run TrajToNodeConverter.py**
+
+Converts the sampled trajectories generated to node point representation
+Output : "AllTrajecsNopePoints.data" 
+
+# **TrajectoryFormation**
+
+TrajSplit
+----------
+
+**1.> Run the exe**
+
+Trajectory splitting is performed
+Output file : "{cabID}_{Split_number}.traj" in Output\Split
+
+# **Clustering**
+
+**1.> Copy "Split" folder to "Clustering\Parallel\" **
+**2.> Copy "Sampled.txt" folder to "Clustering\Parallel\" ****
+
+Clustering\Parallel\Split_Clustering
+------------------------------------
+
+**1.> Run ClusterGenerator.py**
+Output file : "FinalClusters_before_Optimization.csv"
+
+# **TrajectoryFormation**
+
+**1.> Copy "FinalClusters_before_Optimization.csv" folder to "Output\" **
+**2.> Copy "TestTask.data" folder to "Output\" ****
+
 Optimization
 ------------
 
@@ -52,6 +96,8 @@ Optimization
 The optimizing algorithm 
 Output : "FinalClusters.data" in Output\
 Contains the clustered cab IDs along with their cluster prototype
+
+**1.> Copy "SpecifiedTasks.data" folder to "Output\" **
 
 TaskAssingAndEvaluation
 -----------------------

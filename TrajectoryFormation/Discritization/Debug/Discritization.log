@@ -1,20 +1,2 @@
-﻿  stdafx.cpp
-  SampleTrajecs.cpp
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\sampletrajecs.cpp(41): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\sampletrajecs.cpp(100): warning C4244: '=': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ReadWrtiteTrajecs.cpp
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\readwrtitetrajecs.cpp(238): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\readwrtitetrajecs.cpp(258): warning C4018: '<': signed/unsigned mismatch
-  Discritization.cpp
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\discritization.cpp(50): warning C4101: 'file_length': unreferenced local variable
-  CreateSampleSteps.cpp
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(167): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(172): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(177): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(202): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(204): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\discritization\createsamplesteps.cpp(332): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  LINK : D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Discritization.exe not found or not built by the last incremental link; performing full link
-  Discritization.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Discritization.exe
+﻿  Discritization.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Discritization.exe
   Discritization.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Discritization.pdb (Full PDB)

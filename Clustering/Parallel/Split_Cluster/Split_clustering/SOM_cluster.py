@@ -69,7 +69,7 @@ def SOM_clustering_parallel():
     splits_count = 4
     selectedCab = []
     
-    for q in open('sampled.txt', 'r').read().split():
+    for q in open('..//sampled.txt', 'r').read().split():
         selectedCab.append(int(q))
         
     for i in range(1,splits_count+1):
@@ -80,4 +80,4 @@ def SOM_clustering_parallel():
     for proc in jobs:
         proc.join()
 
-SOM_clustering_parallel()
+

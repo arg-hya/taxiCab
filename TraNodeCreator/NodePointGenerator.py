@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     TaskPoints = {}
 
-    shpFilePath = "Data1\\taxi_zones"  
+    shpFilePath = "..\\taxi_zones\\taxi_zones"  
 
 
     sf = shp.Reader(shpFilePath)

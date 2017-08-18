@@ -87,7 +87,7 @@ if __name__ == "__main__":
 ##    target.write("5000")
 ##    target.write("\n")
 	
-    with open(r"AllTrajecs.data") as f:
+    with open(r"..\TrajectoryFormation\Output\Sampled_Trajecs\AllTrajecs.data") as f:
         next(f)
         for line in f:            
             strings = line.split(",")
