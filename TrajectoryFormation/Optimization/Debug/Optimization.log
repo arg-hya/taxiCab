@@ -1,48 +1,50 @@
 ﻿  stdafx.cpp
   ReadTrajectory.cpp
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(74): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(99): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(101): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(95): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(73): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(83): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(93): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(96): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(113): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(97): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(114): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(98): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(115): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(100): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(123): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readtrajectory.cpp(70): warning C4101: 'count': unreferenced local variable
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readtrajectory.cpp(70): warning C4101: 'count': unreferenced local variable
   ReadSampleTasks.cpp
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(33): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(33): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(44): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(44): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(46): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(46): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(48): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(48): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readsampletasks.cpp(50): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readsampletasks.cpp(50): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
   ReadClusters.cpp
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readclusters.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readclusters.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readclusters.cpp(44): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readclusters.cpp(44): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
-d:\taxicab\project_taxicab\trajectoryformation\optimization\readclusters.cpp(49): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\readclusters.cpp(49): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
   Optimization.cpp
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(16): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(32): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(34): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(50): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(104): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\optimization\optimization.cpp(273): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(16): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(32): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(34): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(50): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(88): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(182): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(190): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(204): warning C4018: '>=': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\optimization\optimization.cpp(331): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
-  Optimization.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\Optimization.exe
-  Optimization.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\Optimization.pdb (Full PDB)
+  Optimization.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Optimization.exe
+  Optimization.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\Optimization.pdb (Full PDB)

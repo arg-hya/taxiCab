@@ -1,10 +1,51 @@
-﻿  TaskAssingAndEvaluation.cpp
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(16): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(32): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(34): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(50): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(104): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(230): warning C4018: '<': signed/unsigned mismatch
-  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe
-  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TaskAssingAndEvaluation.pdb (Full PDB)
+﻿  stdafx.cpp
+  TaskAssingAndEvaluation.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(48): warning C4101: 'Budget_rem': unreferenced local variable
+  ReadTrajectory.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(74): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(99): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(101): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(95): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(96): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(97): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(98): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(100): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readtrajectory.cpp(70): warning C4101: 'count': unreferenced local variable
+  ReadSampleTasks.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(51): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(33): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(44): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(46): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(48): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readsampletasks.cpp(50): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+  ReadClusters.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(46): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(47): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(52): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(61): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(62): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(68): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\readclusters.cpp(73): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+  Generating Code...
+  LINK : D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe not found or not built by the last incremental link; performing full link
+  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe
+  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.pdb (Full PDB)

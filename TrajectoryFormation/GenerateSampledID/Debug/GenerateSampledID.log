@@ -1,8 +1,2 @@
-﻿  stdafx.cpp
-  GenerateSampledID.cpp
-  GenerateID.cpp
-d:\taxicab\project_taxicab\trajectoryformation\generatesampledid\generateid.cpp(116): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
-  LINK : D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\GenerateSampledID.exe not found or not built by the last incremental link; performing full link
-  GenerateSampledID.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\GenerateSampledID.exe
-  GenerateSampledID.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\GenerateSampledID.pdb (Full PDB)
+﻿  GenerateSampledID.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\GenerateSampledID.exe
+  GenerateSampledID.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\GenerateSampledID.pdb (Full PDB)

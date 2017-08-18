@@ -1,0 +1,14 @@
+﻿  stdafx.cpp
+  TrajSplit.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajsplit\trajsplit.cpp(95): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajsplit\trajsplit.cpp(109): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajsplit\trajsplit.cpp(50): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajsplit\trajsplit.cpp(51): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajsplit\trajsplit.cpp(54): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(453): note: see declaration of 'strtok'
+  ReadIDs.cpp
+  Generating Code...
+  TrajSplit.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TrajSplit.exe
+  TrajSplit.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TrajSplit.pdb (Full PDB)

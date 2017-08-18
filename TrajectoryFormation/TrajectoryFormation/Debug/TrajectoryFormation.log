@@ -1,9 +1,14 @@
-﻿  GenerateTraj.cpp
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(35): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(169): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(180): warning C4018: '<=': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(184): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(314): warning C4018: '<': signed/unsigned mismatch
-d:\taxicab\project_taxicab\trajectoryformation\trajectoryformation\generatetraj.cpp(322): warning C4018: '<': signed/unsigned mismatch
-  TrajectoryFormation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TrajectoryFormation.exe
-  TrajectoryFormation.vcxproj -> D:\TaxiCab\Project_TaxiCab\TrajectoryFormation\Debug\TrajectoryFormation.pdb (Full PDB)
+﻿  stdafx.cpp
+  TrajectoryFormation.cpp
+  ReadIDs.cpp
+  GenerateTraj.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(35): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(169): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(180): warning C4018: '<=': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(184): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(314): warning C4018: '<': signed/unsigned mismatch
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\trajectoryformation\generatetraj.cpp(322): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  LINK : D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TrajectoryFormation.exe not found or not built by the last incremental link; performing full link
+  TrajectoryFormation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TrajectoryFormation.exe
+  TrajectoryFormation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TrajectoryFormation.pdb (Full PDB)
