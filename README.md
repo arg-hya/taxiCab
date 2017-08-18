@@ -3,15 +3,15 @@ Analysis of taxicab trajectories in NY region.
 
 # **DataCleanUP**
 
-1.> *Run the exe*
+**1.> Run the exe**
 Cleans the data.
 Put the Jan data in Data\1\
 The cleand up data will be generated in Output\
 
-2.> *Run the python scripts present in Output\*
+**2.>  Run the python scripts present in Output\ **
 Converts Lat, Lon to projected co-ordinates
 
-#**TrajectoryFormation**
+# **TrajectoryFormation**
 
 **1.>	Put the cleanup data into TrajectoryFormation\Data**
 
@@ -35,16 +35,16 @@ Output : "{cabID}_sampled.traj" in Output\
 
 ##Optimization
 
-1.> Put "TestTask.data" in Output\
-2.> Run the exe
+**1.> Put "TestTask.data" in Output\ **
+**2.> Run the exe**
 The optimizing algorithm 
 Output : "FinalClusters.data" in Output\
 Contains the clustered cab IDs along with their cluster prototype
 
 ##TaskAssingAndEvaluation
 
-1.> Put "SpecifiedTasks.data" in Output\
-2.> Run the exe
+**1.> Put "SpecifiedTasks.data" in Output\ **
+**2.> Run the exe**
 Assigns Tasks specified in "SpecifiedTasks.data" to suitable cluster
 Output: "ClusterID_TaskAssignation.data" in Output\
 	contains Cluster ID of each corresponding task
