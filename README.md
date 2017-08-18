@@ -1,6 +1,8 @@
 # **taxiCab**
 Analysis of taxicab trajectories in NY region.
 
+Run the modules in order as listed below :
+
 # **DataCleanUP**
 
 **1.> Run the exe**
@@ -9,7 +11,7 @@ Cleans the data.
 Put the Jan data in Data\1\
 The cleand up data will be generated in Output\
 
-**2.>  Run the python scripts present in Output\ **
+**2.>  Run the python scripts present in Output **
 
 Converts Lat, Lon to projected co-ordinates
 
@@ -44,7 +46,7 @@ Output : "{cabID}_sampled.traj" in Output\
 Optimization
 ------------
 
-**1.> Put "TestTask.data" in Output\ **
+**1.> Put "TestTask.data" in Output **
 **2.> Run the exe**
 
 The optimizing algorithm 
@@ -54,7 +56,7 @@ Contains the clustered cab IDs along with their cluster prototype
 TaskAssingAndEvaluation
 -----------------------
 
-**1.> Put "SpecifiedTasks.data" in Output\ **
+**1.> Put "SpecifiedTasks.data" in Output **
 **2.> Run the exe**
 
 Assigns Tasks specified in "SpecifiedTasks.data" to suitable cluster
