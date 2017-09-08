@@ -39,7 +39,7 @@ def SOM_clustering(split,selectedCab):
     length = len(arr[0])
     print("Dim : %d"  %(length))
     #Train a 20x30 SOM with 400 iterations
-    som = SOM(20, 30, length, 1)
+    som = SOM(20, 30, length, 600)
     som.train(testX)
     print ("get_centroids")
     #Get output grid

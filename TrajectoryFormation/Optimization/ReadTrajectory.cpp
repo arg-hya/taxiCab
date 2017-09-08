@@ -102,7 +102,10 @@ int ReadTrajectory::getTrajecs(CabTrajectory** Cabs, std::vector<unsigned int>& 
         strtemp_path = SampledTrajecFilesPath + strTempID + "_sampled.traj";
 
         in_tempfile.open(strtemp_path, std::ios::in);
-        if (!in_tempfile.is_open())	continue;
+        if (!in_tempfile.is_open())
+        {
+            continue;
+        }
 
         int j = 0;
         while (std::getline(in_tempfile, strtemp))

@@ -1,2 +1,4 @@
-﻿  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe
+﻿  TaskAssingAndEvaluation.cpp
+d:\taxicab\all_new_fromgit\taxicab\trunk\trajectoryformation\taskassingandevaluation\taskassingandevaluation.cpp(48): warning C4101: 'Budget_rem': unreferenced local variable
+  TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.exe
   TaskAssingAndEvaluation.vcxproj -> D:\TaxiCab\all_new_fromGit\TaxiCab\trunk\TrajectoryFormation\Debug\TaskAssingAndEvaluation.pdb (Full PDB)

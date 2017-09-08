@@ -10,10 +10,10 @@
 #include "ReadSampleTasks.h"
 
 
-int calDiff(Task tsk, CabTrajectory Centorid)
+unsigned int calDiff(Task tsk, CabTrajectory Centorid)
 {
-    int x,y, diff;
-
+    unsigned int x,y, diff = 0;
+	x=y=diff = 0;
     x = tsk.lat - Centorid.lat;
     y = tsk.lon - Centorid.lon;
 
@@ -66,7 +66,7 @@ int main()
     Budget = BUDGET;
     for (std::vector<Task>::iterator it = SampleTasks.begin(); it != SampleTasks.end(); ++it)
     {
-        int epoch = it->epoch, diff = 0, old_diff = 0, indx = 0, taskID = 0;
+		unsigned int epoch = it->epoch, diff = 0, old_diff = 0, indx = 0, taskID = 0;
 
         for (int i = 0; i < tot_clusters; i++)
         {
@@ -74,7 +74,9 @@ int main()
             if ((Clusters[i].TrajCentroid[epoch].lat == 0) || (Clusters[i].TrajCentroid[epoch].lon == 0))
                 continue;
             diff = calDiff(*it, Clusters[i].TrajCentroid[epoch]);
-            if (diff < old_diff)
+			//std::cout << i << " " << epoch << std::endl;
+			//std::cout << Clusters[i].TrajCentroid[epoch].lat << " " << Clusters[i].TrajCentroid[epoch].lon << std::endl;
+            if ((diff < old_diff) && (i != 0))
             {
                 indx = i;
             }
@@ -87,4 +89,3 @@ int main()
 
     return 0;
 }
-

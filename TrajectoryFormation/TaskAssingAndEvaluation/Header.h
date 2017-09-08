@@ -4,7 +4,7 @@
 #define INPUT_DIR  std::string("..\\Data\\")
 #define OUTPUT_DIR  std::string("..\\Output\\")
 
-#define BUDGET     20 
+#define BUDGET     200
 
 #define TIME_CONSTRAINT     10 
 #define MIN_TASKPERCLUSTER     5
